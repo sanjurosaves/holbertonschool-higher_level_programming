@@ -1,3 +1,5 @@
 #!/usr/bin/python3
-for c in range(0, 26):
-    print(chr(ord('a')+c), end='')
+a = 97
+while a < 123:
+    print(chr(a), end='')
+    a = a + 1
