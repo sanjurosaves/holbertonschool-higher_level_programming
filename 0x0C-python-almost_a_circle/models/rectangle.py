@@ -77,7 +77,12 @@ class Rectangle(Base):
 
     def display(self):
         """prints rectangle instance to stdout with hash symbols"""
+        if (self.__y != 0):
+            for z in range(0, self.__y):
+                print()
         for x in range(0, self.__height):
+            if (self.__x != 0):
+                print(" " * self.__x, end="")
             print("#" * self.__width)
 
     def __str__(self):
