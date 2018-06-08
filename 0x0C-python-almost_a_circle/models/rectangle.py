@@ -79,3 +79,7 @@ class Rectangle(Base):
         """prints rectangle instance to stdout with hash symbols"""
         for x in range(0, self.__height):
             print("#" * self.__width)
+
+    def __str__(self):
+        """override __str__ method to return customized string"""
+        return "[Rectangle] ({}) <{}>/<{}> - <{}>/<{}>".format(self.id, self.__x, self.__y, self.__width, self.__height)
