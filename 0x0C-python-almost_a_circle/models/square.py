@@ -9,7 +9,6 @@ class Square(Rectangle):
 
     def __init__(self, size, x=0, y=0, id=None):
         """ instantiate square """
-        self.size = size
         super().__init__(size, size, x, y, id)
 
     @property
@@ -27,3 +26,15 @@ class Square(Rectangle):
         """override __str__ method to return customized string"""
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x,
                                                  self.y, self.width)
+
+    def update(self, *args, **kwargs):
+        """ updates the class by assigning attributes """
+        if args is not None and len(args) > 0:
+            i = 0
+            attributes = ["id", "size", "x", "y"]
+            for arg in args:
+                setattr(self, attributes[i], args[i])
+                i += 1
+        elif kwargs is not None and len(kwargs) > 0:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
