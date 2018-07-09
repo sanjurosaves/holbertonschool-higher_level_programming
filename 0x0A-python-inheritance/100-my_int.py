@@ -4,10 +4,10 @@
 
 class MyInt(int):
     """ MyInt class """
-    def __init__(self, n):
-        """ instantiate """
-        self.__theint = -n
+    def __eq__(self, yag):
+        """ invert eq """
+        return int.__ne__(self, yag)
 
-    def __str__(self):
-        """ return string of an opposite universe """
-        return "{}".format(-(self.__theint))
+    def __ne__(self, yag):
+        """ invert ne """
+        return int.__eq__(self, yag)
