@@ -2,7 +2,7 @@
 """ creates MyInt rebel class """
 
 
-class MyInt:
+class MyInt(int):
     """ MyInt class """
     def __init__(self, n):
         """ instantiate """
