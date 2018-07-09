@@ -1,0 +1,25 @@
+"7-base_geometry" module
+=========================
+
+Using BaseGeometry
+-------------------------
+
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Using it:
+      >>> bg = BaseGeometry()
+      >>> bg.integer_validator("my_int", 79)
+      >>> bg.integer_validator("name", "James")
+      Traceback (most recent call last):
+      		      ...
+      TypeError: name must be an integer
+      >>> bg.integer_validator("length", -9)
+      Traceback (most recent call last):
+      		      ...
+      ValueError: length must be greater than 0
+      >>> bg.integer_validator("day", 0)
+      Traceback (most recent call last):
+      		      ...
+      ValueError: day must be greater than 0
+
+"""
