@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     session = Session(engine)
     first = session.query(State).order_by(State.id).first()
-    if first == None:
+    if (first is None):
         print("Nothing")
     else:
         print("{}: {}".format(first.id, first.name))
