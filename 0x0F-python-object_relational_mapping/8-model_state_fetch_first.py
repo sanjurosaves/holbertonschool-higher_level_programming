@@ -7,17 +7,14 @@ from sqlalchemy.orm import Session
 
 
 if __name__ == "__main__":
-    i = 0
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
                            .format(argv[1], argv[2], argv[3]))
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    for state in session.query(State).order_by(State.id).all():
-        if (i == 0):
-            if state.name is not None:
-                print("{}: {}".format(state.id, state.name))
-            else:
-                print();
-        i = i + 1
+    first = session.query(State).order_by(State.id).first()
+    if first == None:
+        print("Nothing")
+    else:
+        print("{}: {}".format(first.id, first.name))
     session.close()
