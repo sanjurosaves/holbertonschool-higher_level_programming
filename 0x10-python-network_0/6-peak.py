@@ -4,7 +4,6 @@
 def find_peak(list_of_integers):
     l = list_of_integers
     m = len(l) // 2
-    print("mid is {}".format(m))
 
     if not l:
         return None
