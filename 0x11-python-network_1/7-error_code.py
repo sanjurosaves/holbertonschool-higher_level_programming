@@ -8,6 +8,9 @@ if __name__ == '__main__':
 
     try:
         r = requests.get(url)
-        print(r.text)
-    except HTTPError
+        if r.status_code == '404':
+            print("Error code: 404")
+        else:
+            print(r.text)
+    except HTTPError:
         print("Error code: {}".format(r.raise_for_status()))
