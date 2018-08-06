@@ -5,13 +5,16 @@ if __name__ == '__main__':
     import requests
 
     url = 'http://0.0.0.0:5000/search_user'
-    let = sys.argv[2]
-
-    if let is None:
-        payload = {'q': ""}
-    else:
+    try:
+        let = sys.argv[1]
         payload = {'q': let}
+    except:
+        payload = {'q': ""}
 
     r = requests.post(url, data=payload)
 
-    print(r.json)
+    jso = r.json()
+    try:
+        print("[{}] {}".format(jso['id'], jso['name']))
+    except:
+        print("No result")
