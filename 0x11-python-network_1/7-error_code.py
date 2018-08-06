@@ -8,7 +8,7 @@ if __name__ == '__main__':
 
     try:
         r = requests.get(url)
-        if r.status_code == '404':
+        if r.status_code == 404:
             print("Error code: 404")
         else:
             print(r.text)
