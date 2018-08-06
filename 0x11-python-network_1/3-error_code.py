@@ -7,9 +7,9 @@ if __name__ == '__main__':
 
     url = sys.argv[1]
 
-    with ur.urlopen(url) as response:
-        try:
+    try:
+        with ur.urlopen(url) as response:
             page = response.read()
             print(page.decode("utf-8"))
-        except HTTPError as e:
-            print("Error code: {}".format(e.code))
+    except HTTPError as e:
+        print("Error code: {}".format(e.code))
