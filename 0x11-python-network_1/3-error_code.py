@@ -2,7 +2,7 @@
 
 if __name__ == '__main__':
     import urllib.request as ur
-    import urllib.error
+    from urllib.error import HTTPError
     import sys
 
     url = sys.argv[1]
