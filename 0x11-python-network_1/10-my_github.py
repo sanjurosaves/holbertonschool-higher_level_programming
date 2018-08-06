@@ -12,4 +12,4 @@ if __name__ == '__main__':
     r = requests.get(url, auth=HTTPBasicAuth(u, p))
 
     jso = r.json()
-    print(jso['id'])
+    print(jso.get('id'))
