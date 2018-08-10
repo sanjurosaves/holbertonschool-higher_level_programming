@@ -15,6 +15,9 @@ if __name__ == '__main__':
 
     jso = r.json()
     try:
-        print("[{}] {}".format(jso['id'], jso['name']))
+        if (len(jso_dict) == 0):
+            print("No result")
+        else:
+            print("[{}] {}".format(jso['id'], jso['name']))
     except:
-        print("No result")
+        print("Not a valid JSON")
