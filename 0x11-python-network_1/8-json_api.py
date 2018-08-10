@@ -15,7 +15,7 @@ if __name__ == '__main__':
 
     jso = r.json()
     try:
-        if (len(jso) == 0):
+        if (len(jso.keys()) == 0):
             print("No result")
         else:
             print("[{}] {}".format(jso['id'], jso['name']))
