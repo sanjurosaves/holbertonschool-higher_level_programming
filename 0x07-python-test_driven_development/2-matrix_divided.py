@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 ''' module for matrix_divide function '''
 
+
 def deepcopy(obj):
     if hasattr(obj, '__iter__'):
         return type(obj)(deepcopy(item) for item in obj)
@@ -24,7 +25,7 @@ def matrix_divided(matrix, div):
         lens.append(len(e))
     for e in matrix:
         for le in e:
-            if not isinstance (le, (float, int)):
+            if not isinstance(le, (float, int)):
                 raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
     for l in range(len(matrix)):
         if 'lenl' not in locals():
