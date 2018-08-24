@@ -29,6 +29,16 @@ The function should not accept strings or non-number inputs.
 	>>> add_integer(-7, '+')
 	Traceback (most recent call last):
 	TypeError: b must be an integer
+	>>> add_integer(float('inf'), 2)
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+	>>> add_integer(-float('inf'), 2)
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+	>>> add_integer(float('nan'), 222)
+	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer
+
 
 The function demands at least one input and not more than two inputs.
     >>> add_integer()
