@@ -26,11 +26,11 @@ def matrix_divided(matrix, div):
         for le in e:
             if not isinstance (le, (float, int)):
                 raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
-    i = 0
-    for l in range(lens[0], lens[len(lens) - 1]):
-        if l != lens[i + 1]:
+    for l in range(len(matrix)):
+        if 'lenl' not in locals():
+            lenl = len(matrix[l])
+        if lenl != len(matrix[l]):
             raise TypeError('Each row of the matrix must have the same size')
-        i += 1
     if not isinstance(div, (int, float)):
         raise TypeError('div must be a number')
     if div == 0:
