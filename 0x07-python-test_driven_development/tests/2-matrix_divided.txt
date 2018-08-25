@@ -1,5 +1,17 @@
 	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
+The function demands two arguments.
+
+::
+
+	>>> matrix_divided([2,4])
+	Traceback (most recent call last):
+	TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+	>>> matrix_divided()
+	Traceback (most recent call last):
+	TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
 The matrix must be a list of lists.
 
 ::
@@ -45,6 +57,13 @@ div cannot be zero.
 	>>> matrix_divided([[2,2],[3,3]], 0)
 	Traceback (most recent call last):
 	ZeroDivisionError: division by zero
+
+division by infinity
+
+::
+
+	>>> matrix_divided([[2,2],[3,3]], float('inf'))
+	[[0.0, 0.0], [0.0, 0.0]]
 
 Each result element should be rounded to 2 decimal places
 

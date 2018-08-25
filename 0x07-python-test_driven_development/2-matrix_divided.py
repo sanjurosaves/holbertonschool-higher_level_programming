@@ -17,16 +17,19 @@ def matrix_divided(matrix, div):
         a new matrix showing the quotient of each element and the div
     '''
     if not isinstance(matrix, list):
-        raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+        raise TypeError(
+            'matrix must be a matrix (list of lists) of integers/floats')
     lens = []
     for e in matrix:
         if not isinstance(e, list):
-            raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+            raise TypeError(
+                'matrix must be a matrix (list of lists) of integers/floats')
         lens.append(len(e))
+    pep8 = 'matrix must be a matrix (list of lists) of integers/floats'
     for e in matrix:
         for le in e:
             if not isinstance(le, (float, int)):
-                raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+                raise TypeError(pep8)
     for l in range(len(matrix)):
         if 'lenl' not in locals():
             lenl = len(matrix[l])
