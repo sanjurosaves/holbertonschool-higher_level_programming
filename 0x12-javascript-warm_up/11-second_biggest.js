@@ -8,7 +8,7 @@ if (args.length < 4) {
   for (let i = 3; i <= l; i++) {
     arr.push(parseInt(args[i - 1]));
   }
-  arr.sort();
+  arr.sort(function (a, b) { return a - b; });
   while (arr[arr.length - 1] === arr[arr.length - 2]) {
     arr.pop();
   }
