@@ -4,7 +4,7 @@ let result;
 result = parseInt(args[2]);
 if (isNaN(result)) {
   result = 'Not a number';
-  console.log(result);
-  return;
+} else {
+  result = ('My number: ' + result);
 }
-console.log('My number: ' + result);
+console.log(result);
