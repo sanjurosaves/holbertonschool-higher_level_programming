@@ -42,13 +42,9 @@ class Square extends Rectangle {
       c = 'X';
     }
 
-    let i, j, string;
-    for (i = 0; i < this.width; i++) {
-      string = '';
-      for (j = 0; j < this.width; j++) {
-        string += c;
-      }
-      console.log(string);
+    let i;
+    for (i = 0; i < this.height; i++) {
+      console.log(c.repeat(this.width));
     }
   }
 }
