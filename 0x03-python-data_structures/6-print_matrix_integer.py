@@ -7,4 +7,5 @@ def print_matrix_integer(matrix=[[]]):
             if e is not l[len(l) - 1]:
                 print('{:d}'.format(e), end=" ")
             else:
-                print('{:d}'.format(e))
+                print('{:d}'.format(e), end="")
+        print()
